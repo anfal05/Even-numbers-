@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Print Even Numbers</h1>
+
+    <input type="number" id="num" placeholder="Enter the number">
+
+    <button onclick="printEvenNumbers()">
+        Print Even Numbers
+    </button>
+
+    <div id="result"></div>
+
+    <script>
+        function printEvenNumbers() {
+            let num = parseInt(document.getElementById("num").value);
+            let result = "";
+
+            for (let i = 0; i <= num; i += 2) {
+                result += i + " ";
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
